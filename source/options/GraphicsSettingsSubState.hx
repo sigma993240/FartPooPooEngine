@@ -33,8 +33,8 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		addOption(option);
 		antialiasingOption = optionsArray.length-1;
 
-		var option:Option = new Option('Shaders', //Name
-			"If unchecked, disables shaders.\nIt's used for some visual effects, and also CPU intensive for weaker PCs.", //Description
+		var option:Option = new Option('SHADERS AAAHHHH', //Name
+			"if no check, no more shaders :sob:.\nIt's used for some visual effects, and also CPU intensive for weaker PCs.", //Description
 			'shaders',
 			'bool');
 		addOption(option);
@@ -46,15 +46,15 @@ class GraphicsSettingsSubState extends BaseOptionsMenu
 		addOption(option);
 
 		#if !html5 //Apparently other framerates isn't correctly supported on Browser? Probably it has some V-Sync shit enabled by default, idk
-		var option:Option = new Option('Framerate',
+		var option:Option = new Option('how smooth is this',
 			"Pretty self explanatory, isn't it?",
 			'framerate',
 			'int');
 		addOption(option);
 
 		final refreshRate:Int = FlxG.stage.application.window.displayMode.refreshRate;
-		option.minValue = 60;
-		option.maxValue = 240;
+		option.minValue = 69;
+		option.maxValue = 120;
 		option.defaultValue = Std.int(FlxMath.bound(refreshRate, option.minValue, option.maxValue));
 		option.displayFormat = '%v FPS';
 		option.onChange = onChangeFramerate;
