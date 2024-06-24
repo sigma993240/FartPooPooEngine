@@ -36,7 +36,7 @@ class FPSCounter extends TextField
 		defaultTextFormat = new TextFormat("_sans", 14, color);
 		autoSize = LEFT;
 		multiline = true;
-		text = "FPS: ";
+		text = "how smooth is this: ";
 
 		times = [];
 	}
